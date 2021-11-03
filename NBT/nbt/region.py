@@ -16,6 +16,7 @@ from os import SEEK_END
 
 # constants
 
+
 SECTOR_LENGTH = 4096
 """Constant indicating the length of a sector. A Region file is divided in sectors of 4096 bytes each."""
 
@@ -242,7 +243,9 @@ class RegionFile(object):
         self.chunkclass = chunkclass
         if filename:
             self.filename = filename
-            self.file = open(filename, "r+b")  # open for read and write in binary mode
+            self.file = open(
+                filename, "r+b"
+            )  # open for read and write in binary mode
             self._closefile = True
         elif fileobj:
             if hasattr(fileobj, "name"):
@@ -463,14 +466,18 @@ class RegionFile(object):
         # Sectors are considered free, if the value is an empty list.
         return [not i for i in sectors]
 
-    def _find_free_location(self, free_locations, required_sectors=1, preferred=None):
+    def _find_free_location(
+        self, free_locations, required_sectors=1, preferred=None
+    ):
         """
         Given a list of booleans, find a list of <required_sectors> consecutive True values.
         If no such list is found, return length(free_locations).
         Assumes first two values are always False.
         """
         # check preferred (current) location
-        if preferred and all(free_locations[preferred : preferred + required_sectors]):
+        if preferred and all(
+            free_locations[preferred : preferred + required_sectors]
+        ):
             return preferred
 
         # check other locations
@@ -582,9 +589,13 @@ class RegionFile(object):
         # read metadata block
         m = self.metadata[x, z]
         if m.status == STATUS_CHUNK_NOT_CREATED:
-            raise InconceivedChunk("Chunk %d,%d is not present in region" % (x, z))
+            raise InconceivedChunk(
+                "Chunk %d,%d is not present in region" % (x, z)
+            )
         elif m.status == STATUS_CHUNK_IN_HEADER:
-            raise RegionHeaderError("Chunk %d,%d is in the region header" % (x, z))
+            raise RegionHeaderError(
+                "Chunk %d,%d is in the region header" % (x, z)
+            )
         elif m.status == STATUS_CHUNK_OUT_OF_FILE and (
             m.length <= 1 or m.compression == None
         ):
@@ -613,7 +624,9 @@ class RegionFile(object):
             self.file.seek(m.blockstart * SECTOR_LENGTH + 5)
             # Do not read past the length of the file.
             # The length in the file includes the compression byte, hence the -1.
-            length = min(m.length - 1, self.size - (m.blockstart * SECTOR_LENGTH + 5))
+            length = min(
+                m.length - 1, self.size - (m.blockstart * SECTOR_LENGTH + 5)
+            )
             chunk = self.file.read(length)
 
             if m.compression == COMPRESSION_GZIP:
@@ -657,7 +670,9 @@ class RegionFile(object):
         Raise InconceivedChunk if the chunk is not included in the file.
         """
         # TODO: cache results?
-        data = self.get_blockdata(x, z)  # This may raise a RegionFileFormatError.
+        data = self.get_blockdata(
+            x, z
+        )  # This may raise a RegionFileFormatError.
         data = BytesIO(data)
         err = None
         try:
@@ -674,6 +689,16 @@ class RegionFile(object):
         if err:
             raise ChunkDataError(err)
 
+    def export_chunk(self, x, z):
+        nbt = self.get_chunk(x, z)
+        norm_nbt = self.normalize_block_entities_coord(x, z, nbt)
+        return norm_nbt
+
+    def import_chunk(self, x, z, nbt):
+        abs_nbt = self.denormalize_block_entities_coord(x, z, nbt)
+        self.write_chunk(x, z, abs_nbt)
+        return self
+
     def get_chunk(self, x, z):
         """
         Return a NBTFile of the specified chunk.
@@ -683,10 +708,10 @@ class RegionFile(object):
         than a NBTFile() object. To keep the old functionality, use get_nbt().
         """
         return self.get_nbt(x, z)
-    
-    def get_chunk_entity(self,x,z):
-        nbt_ent = self.get_chunk(x,z)
-        ent = self.normalize_entities_coord(x,z,nbt_ent)
+
+    def get_chunk_entities(self, x, z):
+        nbt_ent = self.get_chunk(x, z)
+        ent = self.normalize_entities_coord(x, z, nbt_ent)
         return ent
 
     def write_blockdata(self, x, z, data, compression=COMPRESSION_ZLIB):
@@ -714,7 +739,8 @@ class RegionFile(object):
 
         if nsectors >= 256:
             raise ChunkDataError(
-                "Chunk is too large (%d sectors exceeds 255 maximum)" % (nsectors)
+                "Chunk is too large (%d sectors exceeds 255 maximum)"
+                % (nsectors)
             )
 
         # Ensure file has a header
@@ -800,11 +826,16 @@ class RegionFile(object):
             for tag in pos.tags:
                 norm_coord.append(tag.value)
 
-            abs_coord = norm_coord
-            abs_coord[0] = abs_coord[0] - x_offset
-            abs_coord[2] = abs_coord[2] - z_offset
-            for i, tag in pos.tags:
+            abs_coord = list(norm_coord)
+            abs_coord[0] = abs_coord[0] + x_offset
+            abs_coord[2] = abs_coord[2] + z_offset
+            for i, tag in enumerate(pos.tags):
                 tag.value = abs_coord[i]
+
+            if entity["id"].value == "minecraft:item_frame":
+                entity["TileX"].value = int(abs_coord[0])
+                entity["TileY"].value = int(abs_coord[1])
+                entity["TileZ"].value = int(abs_coord[2])
         return nbt_file
 
     def normalize_entities_coord(self, x, z, nbt_file):
@@ -817,17 +848,58 @@ class RegionFile(object):
             for tag in pos.tags:
                 abs_coord.append(tag.value)
 
-            norm_coord = abs_coord
+            norm_coord = list(abs_coord)
             norm_coord[0] = norm_coord[0] - x_offset
             norm_coord[2] = norm_coord[2] - z_offset
-            for i, tag in pos.tags:
+            for i, tag in enumerate(pos.tags):
                 tag.value = norm_coord[i]
         return nbt_file
         # TODO: Finish
 
+    def denormalize_block_entities_coord(self, x, z, nbt_file):
+        x_offset = int(self.region_coord[0]) * 32 * 16 + x * 16
+        z_offset = int(self.region_coord[1]) * 32 * 16 + z * 16
+        for entity in nbt_file["block_entities"]:
+            norm_coord = [
+                entity["x"].value,
+                entity["y"].value,
+                entity["z"].value,
+            ]
+
+            abs_coord = list(norm_coord)
+            abs_coord[0] = abs_coord[0] + x_offset
+            abs_coord[2] = abs_coord[2] + z_offset
+
+            entity["x"].value = int(abs_coord[0])
+            entity["y"].value = int(abs_coord[1])
+            entity["z"].value = int(abs_coord[2])
+
+        return nbt_file
+
+    def normalize_block_entities_coord(self, x, z, nbt_file):
+        x_offset = int(self.region_coord[0]) * 32 * 16 + x * 16
+        z_offset = int(self.region_coord[1]) * 32 * 16 + z * 16
+        for entity in nbt_file["block_entities"]:
+
+            abs_coord = [
+                entity["x"].value,
+                entity["y"].value,
+                entity["z"].value,
+            ]
+
+            norm_coord = list(abs_coord)
+            norm_coord[0] = norm_coord[0] - x_offset
+            norm_coord[2] = norm_coord[2] - z_offset
+
+            entity["x"].value = int(norm_coord[0])
+            entity["y"].value = int(norm_coord[1])
+            entity["z"].value = int(norm_coord[2])
+
+        return nbt_file
+
     def write_chunk_entities(self, x, z, nbt_file):
-        ent = self.denormalize_entities_coord(x,z,nbt_file)
-        self.write_chunk(x,z,ent)
+        ent = self.denormalize_entities_coord(x, z, nbt_file)
+        self.write_chunk(x, z, nbt_file)
 
     def write_chunk(self, x, z, nbt_file):
         """
@@ -879,7 +951,10 @@ class RegionFile(object):
         if self.__class__.__module__ in (None,):
             return self.__class__.__name__
         else:
-            return "%s.%s" % (self.__class__.__module__, self.__class__.__name__)
+            return "%s.%s" % (
+                self.__class__.__module__,
+                self.__class__.__name__,
+            )
 
     def __str__(self):
         if self.filename:

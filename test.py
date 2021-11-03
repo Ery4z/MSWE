@@ -21,18 +21,18 @@ region1 = world1.get_region(c_x // 32, c_z // 32)
 region2 = world2.get_region(1, 0)
 
 for m in region1.get_metadata():
-    chunk = region1.get_chunk(m.x, m.z)
+    chunk = region1.export_chunk(m.x, m.z)
     try:
-        entities = entities1.get_chunk(m.x, m.z)
-    except Exception:
+        entities = entities1.get_chunk_entities(m.x, m.z)
+    except Exception as e:
         pass
     else:
         print(f"Entities found x={m.x}, z={m.z}")
-        entities2.write_chunk(m.x, m.z, entities)
+        entities2.write_chunk_entities(m.x, m.z, entities)
 
     # do stuff with the chunk
     # if random.random() > 0.5:
-    region2.write_chunk(m.x, m.z, chunk)
+    region2.import_chunk(m.x, m.z, chunk)
 
 
 print(time.time() - t_s)
