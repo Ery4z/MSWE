@@ -1,0 +1,111 @@
+###################################################
+# THIS FUNCTION WAS MADE BY BASICALLYBART         #
+# FOR THE UNDER OLYMPUS MINECRAFT ADVENTURE MAP   #
+# DO NOT COPY OR FURTHER DISTRIBUTE THIS FUNCTION #
+###################################################
+
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0] run scoreboard players add @s eventTimer 0
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=..49}] run scoreboard players add @s eventTimer 1
+
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run spawnpoint @a -48 126 104 90
+
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run summon minecraft:armor_stand -45 128.5 112 {Tags:["hologram","level_15"],Rotation:[90.0f,0.0f],Invulnerable:1,NoGravity:1,Invisible:1b,HandItems:[{id:"minecraft:white_stained_glass_pane",Count:1b,tag:{CustomModelData:83}},{}],DisabledSlots:2039583,Pose:{RightArm:[0f,0f,0f]}}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run summon minecraft:armor_stand -56 128.5 123 {Tags:["hologram","level_15"],Rotation:[180.0f,0.0f],Invulnerable:1,NoGravity:1,Invisible:1b,HandItems:[{id:"minecraft:white_stained_glass_pane",Count:1b,tag:{CustomModelData:88}},{}],DisabledSlots:2039583,Pose:{RightArm:[0f,0f,0f]}}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run summon minecraft:armor_stand -64 128.5 93 {Tags:["hologram","level_15"],Rotation:[0.0f,0.0f],Invulnerable:1,NoGravity:1,Invisible:1b,HandItems:[{id:"minecraft:white_stained_glass_pane",Count:1b,tag:{CustomModelData:83}},{}],DisabledSlots:2039583,Pose:{RightArm:[0f,0f,0f]}}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run summon minecraft:armor_stand -75 128.5 104 {Tags:["hologram","level_15"],Rotation:[-90.0f,0.0f],Invulnerable:1,NoGravity:1,Invisible:1b,HandItems:[{id:"minecraft:white_stained_glass_pane",Count:1b,tag:{CustomModelData:88}},{}],DisabledSlots:2039583,Pose:{RightArm:[0f,0f,0f]}}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run summon minecraft:armor_stand -45 128.5 104 {Tags:["hologram","level_15"],Rotation:[90.0f,0.0f],Invulnerable:1,NoGravity:1,Invisible:1b,HandItems:[{id:"minecraft:white_stained_glass_pane",Count:1b,tag:{CustomModelData:71}},{}],DisabledSlots:2039583,Pose:{RightArm:[0f,0f,0f]}}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run summon minecraft:armor_stand -75 128.5 112 {Tags:["hologram","level_15"],Rotation:[-90.0f,0.0f],Invulnerable:1,NoGravity:1,Invisible:1b,HandItems:[{id:"minecraft:white_stained_glass_pane",Count:1b,tag:{CustomModelData:70}},{}],DisabledSlots:2039583,Pose:{RightArm:[0f,0f,0f]}}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run summon minecraft:armor_stand -58 128 101.0 {Tags:["hologram","level_15"],Rotation:[90.0f,0.0f],Invulnerable:1,NoGravity:1,Invisible:1b,HandItems:[{id:"minecraft:white_stained_glass_pane",Count:1b,tag:{CustomModelData:34}},{}],DisabledSlots:2039583,Pose:{RightArm:[0f,0f,0f]}}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run summon minecraft:armor_stand -52 128 115.0 {Tags:["hologram","level_15"],Rotation:[90.0f,0.0f],Invulnerable:1,NoGravity:1,Invisible:1b,HandItems:[{id:"minecraft:white_stained_glass_pane",Count:1b,tag:{CustomModelData:27}},{}],DisabledSlots:2039583,Pose:{RightArm:[0f,0f,0f]}}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run summon minecraft:armor_stand -68 128 102.0 {Tags:["hologram","level_15"],Rotation:[-90.0f,0.0f],Invulnerable:1,NoGravity:1,Invisible:1b,HandItems:[{id:"minecraft:white_stained_glass_pane",Count:1b,tag:{CustomModelData:21}},{}],DisabledSlots:2039583,Pose:{RightArm:[0f,0f,0f]}}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run summon minecraft:armor_stand -51 126 102 {Tags:["robot_prop","level_15"],Rotation:[90.0f,0.0f],Invisible:1,Invulnerable:1,DisabledSlots:2039583,ArmorItems:[{},{},{},{id:"minecraft:poisonous_potato",Count:1b,tag:{CustomModelData:99}}],HandItems:[{id:"minecraft:poisonous_potato",Count:1b,tag:{CustomModelData:4}},{}],Pose:{RightArm:[0f,0f,0f]}}
+
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run summon minecraft:armor_stand -73 126 95 {Tags:["hint","level_15"],Rotation:[180.0f,0.0f],Invulnerable:1,NoGravity:1,Invisible:1b,HandItems:[{id:"minecraft:poisonous_potato",Count:1b,tag:{CustomModelData:8}},{}],DisabledSlots:2039583,Pose:{RightArm:[0f,0f,0f]}}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run scoreboard players set timesStopped stopCounter 0
+
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run summon minecraft:armor_stand -52 126 116 {Pose:{RightArm:[0f,0f,0f]},Tags:["blockswap","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1,HandItems:[{id:"minecraft:white_stained_glass_pane",Count:1b,tag:{CustomModelData:1}},{}],ArmorItems:[{},{},{},{id:"minecraft:magma_block",Count:1b}]}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run summon minecraft:armor_stand -68 126 100 {Pose:{RightArm:[0f,0f,0f]},Tags:["blockswap","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1,HandItems:[{id:"minecraft:white_stained_glass_pane",Count:1b,tag:{CustomModelData:1}},{}],ArmorItems:[{},{},{},{id:"minecraft:red_sand",Count:1b}]}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run summon minecraft:armor_stand -58 126 104 {Pose:{RightArm:[0f,0f,0f]},Tags:["crafter","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1,HandItems:[{id:"minecraft:white_stained_glass_pane",Count:1b,tag:{CustomModelData:5}},{}],ArmorItems:[{},{},{},{id:"minecraft:poisonous_potato",Count:1b,tag:{CustomModelData:99}}]}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run summon minecraft:armor_stand -58 128.125 104 {Pose:{RightArm:[0f,0f,0f]},Tags:["crafter_display","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1,HandItems:[{},{}],ArmorItems:[{},{},{},{id:"minecraft:poisonous_potato",Count:1b,tag:{CustomModelData:99}}]}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run summon minecraft:armor_stand -58 126 102 {Pose:{RightArm:[0f,0f,0f]},Tags:["blockswap","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1,HandItems:[{id:"minecraft:white_stained_glass_pane",Count:1b,tag:{CustomModelData:1}},{}],ArmorItems:[{},{},{},{id:"minecraft:poisonous_potato",Count:1b,tag:{CustomModelData:99}}]}
+
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run fill -77 127 111 -77 127 113 minecraft:smooth_stone
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run fill -77 128 111 -77 129 113 minecraft:iron_block
+
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=1}] run clone -69 122 99 -51 122 117 -69 126 99
+
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=30}] run particle minecraft:cloud -43 127.0 104 0 0 1 0.05 50
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=30}] run playsound minecraft:block.fire.extinguish block @a -43 128 104 1 0.5
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=30}] run fill -43 127 103 -43 127 105 minecraft:air
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=30}] run fill -43 128 103 -43 128 105 minecraft:smooth_stone
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=40}] run fill -43 128 103 -43 128 105 minecraft:air
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=40}] run fill -43 129 103 -43 129 105 minecraft:smooth_stone
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=50}] run fill -43 129 103 -43 129 105 minecraft:air
+
+execute as @e[type=armor_stand,tag=blockswap,x=-29,y=126,z=104,dx=0,dy=0,dz=0,nbt={ArmorItems:[{},{},{},{id:"minecraft:poisonous_potato",Count:1b,tag:{CustomModelData:99}}]}] at @s unless entity @e[tag=robot,distance=..2] run particle minecraft:portal ~ ~1.2 ~ 0 0 0 0.3 300 force
+execute as @e[type=armor_stand,tag=blockswap,x=-29,y=126,z=104,dx=0,dy=0,dz=0,nbt={ArmorItems:[{},{},{},{id:"minecraft:poisonous_potato",Count:1b,tag:{CustomModelData:99}}]}] at @s unless entity @e[tag=robot,distance=..2] run data merge entity @s {ArmorItems:[{},{},{},{id:"minecraft:ancient_debris",Count:1b}]}
+execute as @e[type=armor_stand,tag=blockswap,x=-27,y=126,z=102,dx=0,dy=0,dz=0,nbt={ArmorItems:[{},{},{},{id:"minecraft:netherite_block",Count:1b}]}] at @s unless entity @e[tag=robot,distance=..2] run particle minecraft:portal ~ ~1.2 ~ 0 0 0 0.3 300 force
+execute as @e[type=armor_stand,tag=blockswap,x=-27,y=126,z=102,dx=0,dy=0,dz=0,nbt={ArmorItems:[{},{},{},{id:"minecraft:netherite_block",Count:1b}]}] at @s unless entity @e[tag=robot,distance=..2] run data merge entity @s {ArmorItems:[{},{},{},{id:"minecraft:poisonous_potato",Count:1b,tag:{CustomModelData:99}}]}
+
+execute as @e[type=armor_stand,tag=crafter,x=-31,y=126,z=102,dx=0,dy=0,dz=0,nbt={ArmorItems:[{},{},{},{id:"minecraft:ancient_debris",Count:1b}]}] at @s unless entity @e[tag=robot,distance=..2] run particle minecraft:portal ~ ~1.2 ~ 0 0 0 0.3 300 force
+execute as @e[type=armor_stand,tag=crafter,x=-31,y=126,z=102,dx=0,dy=0,dz=0,nbt={ArmorItems:[{},{},{},{id:"minecraft:ancient_debris",Count:1b}]}] at @s unless entity @e[tag=robot,distance=..2] run data modify entity @e[type=armor_stand,tag=crafter_display,distance=..2.2,limit=1] ArmorItems set from entity @s ArmorItems
+execute as @e[type=armor_stand,tag=crafter,x=-31,y=126,z=102,dx=0,dy=0,dz=0,nbt={ArmorItems:[{},{},{},{id:"minecraft:ancient_debris",Count:1b}]}] at @s unless entity @e[tag=robot,distance=..2] run tag @s add block_stored
+execute as @e[type=armor_stand,tag=crafter,x=-31,y=126,z=102,dx=0,dy=0,dz=0,nbt={ArmorItems:[{},{},{},{id:"minecraft:ancient_debris",Count:1b}]}] at @s unless entity @e[tag=robot,distance=..2] run data merge entity @s {ArmorItems:[{},{},{},{id:"minecraft:poisonous_potato",Count:1b,tag:{CustomModelData:99}}]}
+
+execute as @e[type=armor_stand,tag=crafter,tag=block_stored,x=-31,y=126,z=102,dx=0,dy=0,dz=0,nbt={ArmorItems:[{},{},{},{id:"minecraft:poisonous_potato",Count:1b,tag:{CustomModelData:99}}]}] at @s if entity @e[tag=robot,tag=!moving,tag=active,tag=carrying,distance=0..0.1] run data merge entity @e[type=armor_stand,tag=crafter_display,distance=..2.2,limit=1] {ArmorItems:[{},{},{},{id:"minecraft:poisonous_potato",Count:1b,tag:{CustomModelData:99}}]}
+execute as @e[type=armor_stand,tag=crafter,tag=block_stored,x=-31,y=126,z=102,dx=0,dy=0,dz=0,nbt={ArmorItems:[{},{},{},{id:"minecraft:poisonous_potato",Count:1b,tag:{CustomModelData:99}}]}] at @s if entity @e[tag=robot,tag=!moving,tag=active,tag=carrying,distance=0..0.1] run data merge entity @e[tag=robot,tag=!moving,tag=active,tag=carrying,distance=0..0.1,limit=1] {ArmorItems:[{},{},{},{id:"minecraft:netherite_block",Count:1b}]}
+execute as @e[type=armor_stand,tag=crafter,tag=block_stored,x=-31,y=126,z=102,dx=0,dy=0,dz=0,nbt={ArmorItems:[{},{},{},{id:"minecraft:poisonous_potato",Count:1b,tag:{CustomModelData:99}}]}] at @s if entity @e[tag=robot,tag=!moving,tag=active,tag=carrying,distance=0..0.1] run particle minecraft:wax_off ~ ~1.2 ~ 0.2 0.2 0.2 2 25 force
+execute as @e[type=armor_stand,tag=crafter,tag=block_stored,x=-31,y=126,z=102,dx=0,dy=0,dz=0,nbt={ArmorItems:[{},{},{},{id:"minecraft:poisonous_potato",Count:1b,tag:{CustomModelData:99}}]}] at @s if entity @e[tag=robot,tag=!moving,tag=active,tag=carrying,distance=0..0.1] run playsound minecraft:block.anvil.land block @a -31 127 102 1 1.5
+execute as @e[type=armor_stand,tag=crafter,tag=block_stored,x=-31,y=126,z=102,dx=0,dy=0,dz=0,nbt={ArmorItems:[{},{},{},{id:"minecraft:poisonous_potato",Count:1b,tag:{CustomModelData:99}}]}] at @s if entity @e[type=armor_stand,tag=crafter_display,distance=..2.2,nbt={ArmorItems:[{},{},{},{id:"minecraft:poisonous_potato",Count:1b,tag:{CustomModelData:99}}]}] unless entity @e[tag=robot,distance=..2] run tag @s remove block_stored
+
+execute as @a unless entity @s[x=-76,y=126,z=92,dx=32,dy=12,dz=32] run tag @s add not_in_room
+execute as @a if entity @s[x=-74,y=126,z=94,dx=28,dy=12,dz=28] run tag @s remove not_in_room
+
+execute unless entity @a[tag=not_in_room] as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=50..69}] run scoreboard players add @s eventTimer 1
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=51}] run playsound minecraft:block.fire.extinguish block @a -43 128 104 1 0.5
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=51}] run fill -43 129 103 -43 129 105 minecraft:smooth_stone
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=51}] run fill -43 127 103 -43 128 105 minecraft:barrier
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=60}] run fill -43 128 103 -43 128 105 minecraft:smooth_stone
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=60}] run fill -43 129 103 -43 129 105 minecraft:iron_block
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run fill -43 127 103 -43 127 105 minecraft:smooth_stone
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run fill -43 128 103 -43 128 105 minecraft:iron_block
+
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run scoreboard players set progressTracker advProgress 41
+
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -52 124 108 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -54 124 106 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -54 124 112 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -54 124 116 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -56 124 100 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -56 124 102 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -56 124 106 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -56 124 108 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -56 124 112 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -60 124 106 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -62 124 102 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -64 124 100 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -64 124 104 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -64 124 106 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -64 124 108 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -64 124 110 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -64 124 112 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -66 124 100 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -66 124 102 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -66 124 106 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -66 124 102 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -66 124 108 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -66 124 110 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -66 124 112 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -66 124 116 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -68 124 102 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -68 124 106 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -68 124 108 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -68 124 110 {Tags:["modifier","level_15"],Invisible:1,Invulnerable:1,DisabledSlots:2039583,NoGravity:1}
+
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run kill @e[type=armor_stand,tag=robot_prop]
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run summon minecraft:armor_stand -51 126 102 {Tags:["spawn","level_15"],Rotation:[90.0f,0.0f],Invisible:1,Invulnerable:1,NoGravity:1}
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run tag @e[type=armor_stand,tag=level_15,tag=spawn] add respawn
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run scoreboard players set gameTag tagList 1
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run tag @a remove testing_solution
+
+execute as @e[type=armor_stand,tag=spawn,x=-25,y=126,z=102,dx=0,dy=0,dz=0,scores={eventTimer=70}] run kill @e[tag=level_14]

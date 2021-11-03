@@ -1,0 +1,26 @@
+{
+    "display": {
+        "title": {
+            "text": "On Martian soil",
+            "color": "gold"
+        },
+        "description": {
+            "text": "Make your first spacewalk",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:baked_potato",
+            "nbt": "{CustomModelData:1}"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "spacewalk": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "code:story/themartian"
+}

@@ -1,0 +1,25 @@
+{
+    "display": {
+        "title": {
+            "text": "The Ultimate Engineer",
+            "color": "gold"
+        },
+        "description": {
+            "text": "Complete all levels, including the hidden bonus level",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:activator_rail"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "theultimateengineer": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "code:story/engineer"
+}

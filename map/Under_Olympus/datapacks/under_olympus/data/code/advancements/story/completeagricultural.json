@@ -1,0 +1,25 @@
+{
+    "display": {
+        "title": {
+            "text": "Agricultural department",
+            "color": "gold"
+        },
+        "description": {
+            "text": "Complete all assignments at the agricultural department",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:brown_carpet"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "completeagricultural": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "code:story/completemanufacturing"
+}

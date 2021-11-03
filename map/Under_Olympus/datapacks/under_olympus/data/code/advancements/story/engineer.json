@@ -1,0 +1,25 @@
+{
+    "display": {
+        "title": {
+            "text": "Trust me, i'm an engineer!",
+            "color": "gold"
+        },
+        "description": {
+            "text": "Complete your first assignment",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:rail"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "criteria": {
+        "engineer": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "code:story/themartian"
+}

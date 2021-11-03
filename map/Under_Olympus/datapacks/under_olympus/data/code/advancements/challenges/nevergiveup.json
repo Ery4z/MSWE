@@ -1,0 +1,26 @@
+{
+    "__comment": "Made with TheDestruc7i0n's advancements generator: https://advancements.thedestruc7i0n.ca",
+    "display": {
+        "title": {
+            "text": "Never gonna give you up",
+            "color": "gold"
+        },
+        "description": {
+            "text": "Complete the map without using a single hint",
+            "color": "white"
+        },
+        "icon": {
+            "item": "minecraft:totem_of_undying"
+        },
+        "frame": "task",
+        "show_toast": true,
+        "announce_to_chat": false,
+        "hidden": false
+    },
+    "criteria": {
+        "nevergiveup": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "parent": "code:challenges/root"
+}
