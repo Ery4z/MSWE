@@ -1,0 +1,1 @@
+Put the Java resource pack you want loaded in here.
