@@ -132,6 +132,11 @@ def map_chunks(coord1, coord2, coord3):
     return dict_region
 
 
+def copy_chunks(coord1, coord2, coord3, map1, map2):
+    map_dict = map_chunks(coord1, coord2, coord3)
+    copy_chunk_from_mapdict(map1, map2, map_dict)
+
+
 def copy_chunk_from_mapdict(map1, map2, map_dict):
     t_s = time.time()
     world1 = WorldFolder(map1)
@@ -191,9 +196,7 @@ def copy_chunk_from_mapdict(map1, map2, map_dict):
 
             start_region_object = start_region[local_map[0]]
             try:
-                start_region_entities_object = start_region_entities[
-                    local_map[0]
-                ]
+                start_region_entities_object = start_region_entities[local_map[0]]
             except:
                 print(f"ENTITY | Unable to open region {local_map[0]} of map 2")
 
@@ -211,15 +214,11 @@ def copy_chunk_from_mapdict(map1, map2, map_dict):
 
             else:
                 try:
-                    start_entities = (
-                        start_region_entities_object.get_chunk_entities(
-                            local_map[1][0], local_map[1][1]
-                        )
+                    start_entities = start_region_entities_object.get_chunk_entities(
+                        local_map[1][0], local_map[1][1]
                     )
                 except Exception as e:
-                    print(
-                        f"ENTITY | Error while loading entity {local_map[1]} : {e}"
-                    )
+                    print(f"ENTITY | Error while loading entity {local_map[1]} : {e}")
                 else:
                     try:
                         end_region_entities_object.write_chunk_entities(
@@ -237,13 +236,15 @@ def copy_chunk_from_mapdict(map1, map2, map_dict):
     # if random.random() > 0.5:
 
 
-map1 = "C:\\Users\\Thomas\\AppData\\Roaming\\.minecraft\\saves\\New World (1)"
-map2 = map1
+if __name__ == "__main__":
 
-coord1 = (598, 500)
-coord2 = (637, 418)
-coord3 = (777, 375)
+    map1 = "C:\\Users\\Thomas\\AppData\\Roaming\\.minecraft\\saves\\New World (1)"
+    map2 = map1
 
-map_dict = map_chunks(coord1, coord2, coord3)
+    coord1 = (598, 500)
+    coord2 = (637, 418)
+    coord3 = (777, 375)
 
-copy_chunk_from_mapdict(map1, map2, map_dict)
+    map_dict = map_chunks(coord1, coord2, coord3)
+
+    copy_chunk_from_mapdict(map1, map2, map_dict)
