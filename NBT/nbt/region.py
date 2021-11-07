@@ -691,12 +691,19 @@ class RegionFile(object):
 
     def export_chunk(self, x, z):
         nbt = self.get_chunk(x, z)
-        norm_nbt = self.normalize_block_entities_coord(x, z, nbt)
+        try:
+            norm_nbt = self.normalize_block_entities_coord(x, z, nbt)
+        except:
+            return nbt
         return norm_nbt
 
     def import_chunk(self, x, z, nbt):
-        abs_nbt = self.denormalize_block_entities_coord(x, z, nbt)
-        self.write_chunk(x, z, abs_nbt)
+        try:
+            abs_nbt = self.denormalize_block_entities_coord(x, z, nbt)
+        except:
+            self.write_chunk(x, z, nbt)
+        else:
+            self.write_chunk(x, z, abs_nbt)
         return self
 
     def get_chunk(self, x, z):

@@ -170,9 +170,9 @@ def copy_chunk_from_mapdict(map1, map2, map_dict):
             start_region_entities[start_region_key] = world1.get_entities(
                 start_region_key[0], start_region_key[1]
             )
-        except:
+        except Exception as e:
             print(
-                f"ENTITY | Unable to open world 1 r.{start_region_key[0]}.{start_region_key[1]}"
+                f"ENTITY | Unable to open world 1 r.{start_region_key[0]}.{start_region_key[1]} : {e}"
             )
 
     for end_region_key in necessary_region_coord_end:
@@ -183,9 +183,9 @@ def copy_chunk_from_mapdict(map1, map2, map_dict):
             end_region_entities[end_region_key] = world2.get_entities(
                 end_region_key[0], end_region_key[1]
             )
-        except:
+        except Exception as e:
             print(
-                f"ENTITY | Unable to open world 2 r.{end_region_key[0]}.{end_region_key[1]}"
+                f"ENTITY | Unable to open world 2 r.{end_region_key[0]}.{end_region_key[1]} : {e}"
             )
 
     for region_end_key in map_dict:
@@ -196,9 +196,13 @@ def copy_chunk_from_mapdict(map1, map2, map_dict):
 
             start_region_object = start_region[local_map[0]]
             try:
-                start_region_entities_object = start_region_entities[local_map[0]]
-            except:
-                print(f"ENTITY | Unable to open region {local_map[0]} of map 2")
+                start_region_entities_object = start_region_entities[
+                    local_map[0]
+                ]
+            except Exception as e:
+                print(
+                    f"ENTITY | Unable to open region {local_map[0]} of map 2 : {e}"
+                )
 
             try:
                 start_chunk = start_region_object.export_chunk(
@@ -207,18 +211,22 @@ def copy_chunk_from_mapdict(map1, map2, map_dict):
                 end_region_object.import_chunk(
                     local_end_chunk_key[0], local_end_chunk_key[1], start_chunk
                 )
-            except:
+            except Exception as e:
                 print(
-                    f"BLOCS | Error while exporting {local_map[1][0], local_map[1][1]}"
+                    f"BLOCS | Error while exporting {local_map[1][0], local_map[1][1]} : {e}"
                 )
 
             else:
                 try:
-                    start_entities = start_region_entities_object.get_chunk_entities(
-                        local_map[1][0], local_map[1][1]
+                    start_entities = (
+                        start_region_entities_object.get_chunk_entities(
+                            local_map[1][0], local_map[1][1]
+                        )
                     )
                 except Exception as e:
-                    print(f"ENTITY | Error while loading entity {local_map[1]} : {e}")
+                    print(
+                        f"ENTITY | Error while loading entity {local_map[1]} : {e}"
+                    )
                 else:
                     try:
                         end_region_entities_object.write_chunk_entities(
@@ -226,9 +234,9 @@ def copy_chunk_from_mapdict(map1, map2, map_dict):
                             local_end_chunk_key[1],
                             start_entities,
                         )
-                    except Exception:
+                    except Exception as e:
                         print(
-                            f"ENTITY | Error while writing entity {local_end_chunk_key}"
+                            f"ENTITY | Error while writing entity {local_end_chunk_key} : {e}"
                         )
     print(time.time() - t_s)
 
@@ -238,7 +246,9 @@ def copy_chunk_from_mapdict(map1, map2, map_dict):
 
 if __name__ == "__main__":
 
-    map1 = "C:\\Users\\Thomas\\AppData\\Roaming\\.minecraft\\saves\\New World (1)"
+    map1 = (
+        "C:\\Users\\Thomas\\AppData\\Roaming\\.minecraft\\saves\\New World (1)"
+    )
     map2 = map1
 
     coord1 = (598, 500)
