@@ -1,8 +1,6 @@
 # Minecraft Simple World Editor (work in 1.18)
 ## _Simple interface to edit your world_
 
-[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
-
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 The purpose of this repo is to give you tools to edit simply your mincraft world.
