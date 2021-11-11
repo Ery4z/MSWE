@@ -16,7 +16,7 @@ The actual functionnality supported are:
 - Python function to be exported
 
 ### Item container
-Everey Item container (chest,shulker,dispenser,...) has their item copied.
+Every Item container (chest,shulker,dispenser,...) has their item copied.
 
 ### Entities Copy
 Actual entities supported are :
