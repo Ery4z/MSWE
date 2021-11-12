@@ -31,7 +31,7 @@ Choose 2 copy points which will define a rectangle. Every chunks in it will be c
 
 If you only want to copy chunks in the same world, you have to select the same world for world 1 and 2.
 
-Carefull, it is necessary to have the region file already created to the paste region. It is not needed for the entities region file.
+Caution, it is necessary to have the region file already created to the paste region. It is not needed for the entities region file.
 
 **Please Generate the paste region approximately before pasting. Same for copied region**
 
